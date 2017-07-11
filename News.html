@@ -1,0 +1,433 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>News & Press</title>
+	<script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+	<style>
+		*{
+			margin: 0;padding: 0;list-style: none;text-decoration: none;border: 0;outline: 0;
+			font-family: "Trebuchet MS";
+		}
+		body{background: #171310;}
+		#main{
+			width: 940px;margin: 0 auto;position: relative;
+		}
+					/*header*/
+		.htop{
+			width: 940px;height: 161px;
+		}
+		#logo{
+			padding: 44px 0 0 35px;float: left;
+		}
+		.nav{
+			width: 147px;height: 31px;padding: 40px 37px 0 575px;float: right;
+		}
+		.nav>li{
+			float: left;padding: 4px 26px 5px 0;margin-right: 25px;vertical-align: top;
+			background: url(images/top_line.png) right  no-repeat;
+		}
+		.nav>.end{
+			margin: 0;background: none;padding: 4px 0 5px;
+		}
+		.menu{
+			float: right;padding: 28px 12px 20px 0;vertical-align: top;display: block;
+		}
+		.menu>li{
+			float: left;padding-left: 1px;
+		}
+		.menu>li>a{
+			display: block;padding: 0 20px;height: 42px;font-size: 18px;color: #dad6cc;
+			line-height: 42px;
+		}
+		#menu_active{background: #FFBA1A;color: #fff;}
+		.menu>li>a:hover{background: #FFBA1A;color: #fff;}
+		.hbottom{
+			width: 880px;height: 205px;border-top: 5px solid #cdc8bc;padding: 15px 30px 29px;
+			background: url(images/bg_box1.jpg) top center repeat;overflow: hidden;
+		}
+		.hbottom>div{
+			width: 100%;height: 151px;background: url(images/line_vert1.gif) 289px 0 repeat-y;
+			margin-top: 34px;
+		}
+		.hbottom>img{
+			float: left;margin-top: 3px;margin-left: 5px;
+		}
+		.hbottom>div>p{
+			width: 570px;font-size: 14px;line-height: 22px;color: #575652;float: right;
+		}
+		.hbottom1{
+			padding-bottom: 14px;
+		}
+		.hbottom2{
+			padding-bottom: 4px;
+		}
+		
+					/*content*/
+		#content{
+			width: 940px;
+		}
+		.years{
+			width: 940px;height: 96px;
+		}
+		.years>ul{
+			padding: 27px 0 27px 2px;overflow: hidden;
+		}
+		.years>ul>li{
+			display: list-item;float: left;padding-left: 28px;cursor: pointer;
+			font-size: 35px;color: #DDD9CF;line-height: 42px;
+		}
+		.years>ul>li:hover{
+			color: #FFBA1A;
+		}
+		#years_on{
+			color: #FFBA1A;
+		}
+		.article{
+			background: #0e0c0a;padding: 25px 36px 32px;
+		}
+		.article>div{
+			display: none;
+		}
+		.article>div>p{
+			color: #575652;font-size: 14px;line-height: 22px;padding-bottom: 15px;
+		}
+		#article_block{
+			display: block;
+		}
+					/*footer*/
+		footer{
+			width: 868px;height: 171px;padding: 21px 36px 44px;background: #000;
+		}
+		.footer_top{
+			width: 100%;height: 55px;overflow: hidden;
+		}
+		.footer_top>a{
+			float: left;margin-top: 3px;
+		}
+		.footer_top>ul{
+			float: right;padding: 20px 0 0 0;
+		}
+		.footer_top>ul>li{
+			float: left;padding-left: 4px;
+		}
+		.footer_middle{
+			width: 100%;height: 53px;overflow: hidden;position: relative;
+		}
+		.footer_middle>ul{
+			float: left;padding: 15px 0 18px;margin-left: 2px;
+		}
+		.footer_middle>ul>li{
+			float: left;padding-right: 29px;margin-right: 29px;font-size: 14px;
+			background: url(images/top_line.png) right  no-repeat;
+		}
+		.footer_middle>ul>li>a{
+			color: #fff;
+		}
+		#footer_active{
+			color: #575652;
+		}
+		.footer_middle>ul>li>a:hover{
+			color: #575652;
+		}
+		.footer_middle>img{
+			float: right;margin-top: 2px;position: absolute;right: 0;top: 0;
+		}
+		.footer_bottom{
+			padding-top: 18px;border-top: 1px solid #0d0d0d;text-align: center;
+		}
+		.footer_bottom>a{
+			font-size: 14px;color: #fff;
+		}
+		.footer_bottom>a:hover{
+			text-decoration: underline;
+		}
+		.ftl{
+			height: 20px;width: 76px;line-height: 20px;text-align: center;display: none;
+			background: #FFBA1A;color: #fff;font-size: 14px;position:absolute;
+		}
+	</style>
+</head>
+<body>
+	<div id="main">
+		<!-- header -->
+		<header>
+			<div class="htop">
+				<div id="logo">
+					<a href="index.html">
+						<img src="images/logo.png" alt="">
+					</a>
+				</div>
+				<ul class="nav">
+					<li>
+						<a href="#">
+							<img src="images/top_icon1.gif" alt="">
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<img src="images/top_icon2.gif" alt="">
+						</a>
+					</li>
+					<li class="end">
+						<a href="#">
+							<img src="images/top_icon3.gif" alt="">
+						</a>
+					</li>
+				</ul>
+				<ul class="menu">
+					<li>
+						<a href="index.html">HOME</a>
+					</li>
+					<li>
+						<a href="Mission.html">OUR MISSION</a>
+					</li>
+					<li>
+						<a href="News.html" id="menu_active">NEWS & PRESS</a>
+					</li>
+					<li>
+						<a href="Help.html">HOW TO HELP</a>
+					</li>
+					<li>
+						<a href="Contact.html">CONTACT</a>
+					</li>
+				</ul>
+			</div>
+			<div class="hbottom">
+				<img src="images/2017-04-24_230102.png" alt="">
+				<div>
+					<p class="hbottom1">
+						Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+					</p>
+					<p class="hbottom2">
+						Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur.
+					</p>
+				</div>
+			</div>
+		</header>
+		<div></div>
+		<!-- /header -->
+		<!-- content -->
+		<div id="content">
+			<div class="years">
+				<ul>
+					<li id="years_on" year="0">2003</li>
+					<li year="1">2004</li>
+					<li year="2">2005</li>
+					<li year="3">2006</li>
+					<li year="4">2007</li>
+					<li year="5">2008</li>
+					<li year="6">2009</li>
+					<li year="7">2010</li>
+					<li year="8">2011</li>
+				</ul>
+			</div>
+			<div class="article">
+				<div id="article_block">
+					<img src="images/2017-04-24_233224.png" alt="">
+					<p>
+						Natus error sit voluptatem accusantium doloremque laudantium architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.
+					</p>
+					<img src="images/2017-04-24_234230.png" alt="">
+					<p>
+						Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur.
+					</p>
+					<img src="images/2017-04-24_234305.png" alt="">
+					<p>
+						Natus error sit voluptatem accusantium doloremque laudantium architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.
+					</p>
+				</div>
+				<div>
+					<img src="images/2017-04-24_234643.png" alt="">
+					<p>
+						Natus error sit voluptatem accusantium doloremque laudantium architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.
+					</p>
+					<img src="images/2017-04-24_234711.png" alt="">
+					<p>
+						Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur.
+					</p>
+					<img src="images/2017-04-24_234739.png" alt="">
+					<p>
+						Natus error sit voluptatem accusantium doloremque laudantium architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.
+					</p>
+				</div>
+				<div>
+					<img src="images/2017-04-24_234910.png" alt="">
+					<p>
+						Natus error sit voluptatem accusantium doloremque laudantium architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.
+					</p>
+					<img src="images/2017-04-24_234942.png" alt="">
+					<p>
+						Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur.
+					</p>
+					<img src="images/2017-04-24_235006.png" alt="">
+					<p>
+						Natus error sit voluptatem accusantium doloremque laudantium architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.
+					</p>
+				</div>
+				<div>
+					<img src="images/2017-04-24_235059.png" alt="">
+					<p>
+						Natus error sit voluptatem accusantium doloremque laudantium architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.
+					</p>
+					<img src="images/2017-04-24_235124.png" alt="">
+					<p>
+						Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur.
+					</p>
+					<img src="images/2017-04-24_235150.png" alt="">
+					<p>
+						Natus error sit voluptatem accusantium doloremque laudantium architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.
+					</p>
+				</div>
+				<div>
+					<img src="images/2017-04-24_235240.png" alt="">
+					<p>
+						Natus error sit voluptatem accusantium doloremque laudantium architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.
+					</p>
+					<img src="images/2017-04-24_235259.png" alt="">
+					<p>
+						Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur.
+					</p>
+					<img src="images/2017-04-24_235333.png" alt="">
+					<p>
+						Natus error sit voluptatem accusantium doloremque laudantium architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.
+					</p>
+					<img src="images/2017-04-24_235410.png" alt="">
+					<p>
+						Natus error sit voluptatem accusantium doloremque laudantium architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.
+					</p>
+				</div>
+				<div>
+					<img src="images/2017-04-27_140617.png" alt="">
+					<p>
+						Natus error sit voluptatem accusantium doloremque laudantium architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.
+					</p>
+					<img src="images/2017-04-27_140659.png" alt="">
+					<p>
+						Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur.
+					</p>
+				</div>
+				<div>
+					<img src="images/2017-04-27_140758.png" alt="">
+					<p>
+						Natus error sit voluptatem accusantium doloremque laudantium architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.
+					</p>
+					<img src="images/2017-04-27_140912.png" alt="">
+					<p>
+						Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur.
+					</p>
+					<img src="images/2017-04-27_140933.png" alt="">
+					<p>
+						Natus error sit voluptatem accusantium doloremque laudantium architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.
+					</p>
+				</div>
+				<div>
+					<img src="images/2017-04-27_141037.png" alt="">
+					<p>
+						Natus error sit voluptatem accusantium doloremque laudantium architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.
+					</p>
+					<img src="images/2017-04-27_141111.png" alt="">
+					<p>
+						Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur.
+					</p>
+					<img src="images/2017-04-27_141140.png" alt="">
+					<p>
+						Natus error sit voluptatem accusantium doloremque laudantium architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.
+					</p>
+				</div>
+				<div>
+					<img src="images/2017-04-27_141220.png" alt="">
+					<p>
+						Natus error sit voluptatem accusantium doloremque laudantium architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.
+					</p>
+					<img src="images/2017-04-27_141310.png" alt="">
+					<p>
+						Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur.
+					</p>
+					<img src="images/2017-04-27_141347.png" alt="">
+					<p>
+						Natus error sit voluptatem accusantium doloremque laudantium architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.
+					</p>
+				</div>
+			</div>
+		</div>
+		<!-- /content -->
+		<!-- footer -->
+		<footer>
+			<div class="footer_top">
+				<a href="index.html">
+					<img src="images/footer_logo.png" alt="">
+				</a>
+				<ul>
+					<li id="facebook"><a href="#"><img src="images/icon1.gif" alt=""></a></li>
+					<li id="twitter"><a href="#"><img src="images/icon2.gif" alt=""></a></li>
+					<li id="linkedin"><a href="#"><img src="images/icon3.gif" alt=""></a></li>
+				</ul>
+			</div>
+			<div class="footer_middle">
+				<ul>
+					<li>
+						<a href="index.html">Home</a>
+					</li>
+					<li>
+						<a href="Mission.html">Our Mission</a>
+					</li>
+					<li>
+						<a href="News.html" id="footer_active">News & Press</a>
+					</li>
+					<li>
+						<a href="Help.html">How to Help</a>
+					</li>
+					<li>
+						<a href="Contact.html">Contact</a>
+					</li>
+				</ul>
+				<img src="images/footer_tel.png" alt="">
+			</div>
+			<div class="footer_bottom">
+				<a href="#">H5-26 Silence Zhang</a>
+				<br>
+				<a href="#">张宴其</a>
+			</div>
+		</footer>
+		<div class="ftl facebook"><span>Facebook</span></div>
+		<div class="ftl twitter"><span>Twitter</span></div>
+		<div class="ftl linkedin"><span>Linkedin</span></div>
+		<!-- /footer -->
+	</div>
+</body>
+</html>
+<script>
+	for(var i = 0;i < 9;i++){
+		$('.years li').eq(i).click(function(){
+			var year = $(this).attr('year');
+			$('#article_block').stop().fadeOut(300).removeAttr('id');
+			$('#years_on').removeAttr('id');
+			$('.years li').eq(year).attr('id','years_on');
+			$('.article>div').eq(year).stop().fadeIn(300).attr('id','article_block');
+		});
+	}
+
+	//底部特效
+	$('#facebook').mousemove(function(ent){
+		var e = ent || window.event;
+		$('.facebook').css({left:e.pageX-475,top:e.pageY-30,display:'block'})
+	}).mouseout(function(ent){
+		var e = ent || window.event;
+		$('.facebook').css({display:'none'})
+	});
+	$('#twitter').mousemove(function(ent){
+		var e = ent || window.event;
+		$('.twitter').css({left:e.pageX-475,top:e.pageY-30,display:'block'})
+	}).mouseout(function(ent){
+		var e = ent || window.event;
+		$('.twitter').css({display:'none'})
+	});
+	$('#linkedin').mousemove(function(ent){
+		var e = ent || window.event;
+		$('.linkedin').css({left:e.pageX-475,top:e.pageY-30,display:'block'})
+	}).mouseout(function(ent){
+		var e = ent || window.event;
+		$('.linkedin').css({display:'none'})
+	});
+</script>

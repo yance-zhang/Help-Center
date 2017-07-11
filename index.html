@@ -1,0 +1,631 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Home</title>
+	<script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+	<style>
+		*{
+			margin: 0;padding: 0;list-style: none;text-decoration: none;border: 0;outline: 0;
+			font-family: "Trebuchet MS";
+		}
+		body{background: #171310;}
+		#main{
+			width: 940px;margin: 0 auto;position: relative;
+		}
+					/*header*/
+		.htop{
+			width: 940px;height: 161px;
+		}
+		#logo{
+			padding: 44px 0 0 35px;float: left;
+		}
+		.nav{
+			width: 147px;height: 31px;padding: 40px 37px 0 575px;float: right;
+		}
+		.nav>li{
+			float: left;padding: 4px 26px 5px 0;margin-right: 25px;vertical-align: top;
+			background: url(images/top_line.png) right  no-repeat;
+		}
+		.nav>.end{
+			margin: 0;background: none;padding: 4px 0 5px;
+		}
+		.menu{
+			float: right;padding: 28px 12px 20px 0;vertical-align: top;display: block;
+		}
+		.menu>li{
+			float: left;padding-left: 1px;
+		}
+		.menu>li>a{
+			display: block;padding: 0 20px;height: 42px;font-size: 18px;color: #dad6cc;
+			line-height: 42px;
+		}
+		#menu_active{background: #FFBA1A;color: #fff;}
+		.menu>li>a:hover{background: #FFBA1A;color: #fff;}
+					/*swiper*/
+		.hbottom{
+			width: 940px;height: 465px;margin-bottom: 10px;position: relative;
+		}
+		.swiper_left{
+			position: absolute;left: 0;top: 0;z-index: 3;display: block;
+		}
+		.swiper_left>li{
+			display: list-item;width: 250px;height: 155px;position: absolute;left: 0;z-index: 100;
+		}
+		.swiper_left div{
+			position: absolute;top: 0;left: 0;overflow: hidden;z-index: 1000;cursor: pointer;
+		}
+		.swiper_left img{
+			position: absolute;top: 0;left: -250px;z-index: 10000;
+		}
+		.swiper_left>li:nth-child(1){
+			background-image: url(images/banner1_active.png);
+			background-repeat: no-repeat;top: 0;
+			background-position: -250px 0;
+		}
+		.swiper_left>li:nth-child(2){
+			background: url(images/banner2_active.png) -250px 0 no-repeat;top: 155px;
+		}
+		.swiper_left>li:nth-child(3){
+			background: url(images/banner3_active.png) -250px 0 no-repeat;top: 310px;
+		}
+		.swiper_left>li:nth-child(1)>div{
+			width: 100%;height: 100%;background: url(images/2017-04-25_201554.png) no-repeat;
+		}
+		.swiper_left>li:nth-child(2)>div{
+			width: 100%;height: 100%;background: url(images/2017-04-25_201820.png) no-repeat;
+		}
+		.swiper_left>li:nth-child(3)>div{
+			width: 100%;height: 100%;background: url(images/2017-04-25_202146.png) no-repeat;
+		}
+		#sl{left: 0;}
+		
+		
+		
+					/*轮播图*/
+		.swiper{
+			width: 720px;height: 465px;position: absolute;top: 0;right: 0;z-index: 1;
+			background-image: url(images/img1.jpg);
+			background-repeat: no-repeat;
+			background-position: 0 0;
+		}
+		.pics{
+			width: 0px;height: 465px;position: absolute;top: 0;
+			overflow: hidden;z-index: 10;
+			background-image: url(images/img1.jpg);
+			background-repeat: no-repeat;
+			background-position: 0 0;
+		}
+		.swiper_right{
+			width: 600px;height: 200px;position: absolute;bottom: 0;right: 0;z-index: 100;
+			overflow: hidden;
+		}
+		.swiper_right>div{
+			width: 590px;height: 135px;padding:0 10px 10px 0;
+			position: absolute;bottom: 0;right: -590px;
+		}
+		.img1{position: absolute;right: 10px;top: 0;}
+		.img2{position: absolute;right: 10px;bottom: 10px;}
+		#sr{right: 0px;}
+		
+
+					/*content*/
+		#content{
+			width: 940px;height: 687px;
+		}
+		.story{
+			width: 880px;height: 258px;border-top: 5px solid #cdc8bc;padding: 15px 30px 29px;
+			background: url(images/bg_box1.jpg) top center no-repeat;overflow: hidden;
+		}
+		.storyline1,.storyline2,.dateline1,.dateline2{
+			width: 100%;height: 100%;
+		}
+		.storyline1{
+			background: url(images/line_vert1.gif) 289px 0 repeat-y;
+		}
+		.storyline2{
+			background: url(images/line_vert1.gif) 591px 0 repeat-y;
+		}
+		.story>div>div>div{
+			width: 264px;margin: 0 6px;float: left;position: relative;font-size: 14px;color: #575652;
+			line-height: 22px;
+		}
+		.story>div>div>div>a{
+			color: #575652;
+		}
+		.story1>img,.story2>img,.story3>img{
+			padding-bottom: 12px;
+		}
+		#readm1,#readm2,#readm3{
+			float: right;background: #000;margin-top: 2px;padding: 0 9px;line-height: 18px;
+			font-size: 14px;color: #dddad1;
+		}
+		#readm1:hover{
+			background: #FFBA1A;color: #fff;
+		}
+		#readm2:hover{
+			background: #98CB34;color: #fff;
+		}
+		#readm3:hover{
+			background: #66D3A9;color: #fff;text-decoration: none
+		}
+		#story1{
+			text-decoration: underline;
+		}
+		#story1:hover{
+			text-decoration: none;
+		}
+		.story2,.story3{
+			padding-left: 26px;
+		}
+		.story2>img{
+			margin-top: 1px;
+		}
+		.story3>a:hover{
+			text-decoration: underline;
+		}
+		.mission{
+			width: 940px;height: 146px;
+		}
+		.mission>img{
+			float: left;
+		}
+		.mission>p{
+			width: 570px;float: left;margin-left: 86px;margin-top: 17px;padding: 12px 0 17px 41px;
+			font-style: italic;background: url(images/quot1.png) 0 0 no-repeat;color: #575652;
+			font-size: 14px;line-height: 22px;
+		}
+		.mission>p>img{
+			display: inline-block;margin: 4px 0 0 9px;vertical-align: top;
+		}
+		.date{
+			height: 177px;background: #0e0c0a;padding: 25px 30px 32px;
+		}
+		.dateline2{
+			background: url(images/line_vert2.gif) 591px 0 repeat-y;
+		}
+		.dateline1{
+			background: url(images/line_vert2.gif) 289px 0 repeat-y;
+		}
+		.date1>div,.date2>div,.date3>div{
+			width: 264px;height: 70px;margin-bottom: 5px;float: left;
+		}
+		.dateline2>div{
+			width: 264px;height: 177px;margin: 0 6px;float: left;line-height: 22px;
+		}
+		.dateline2>div:nth-child(2),.dateline2>div:nth-child(3){
+			padding-left: 26px;
+		}
+		.date1>p,.date2>p,.date3>p{
+			font-size: 14px;color: #575652;padding-bottom: 22px;
+		}
+		.date1>a,.date2>a,.date3>a{
+			display: inline-block;height: 36px;font-size: 15px;color: #fff;padding: 0 21px;
+			line-height: 34px;background: 
+		}
+		.date1>a{
+			background: #FFBA1A;
+		}
+		.date2>a{
+			background: #98CB34;
+		}
+		.date3>a{
+			background: #66D3A9;
+		}
+		.date1>a:hover,.date2>a:hover,.date3>a:hover{
+			background: transparent;
+		}
+		.date_pic1{
+			background: url(images/date.png) -7px 0 no-repeat;
+		}
+		.date_pic2{
+			background: url(images/date.png) -308px 0 no-repeat;
+		}
+		.date_pic3{
+			background: url(images/date.png) -610px 0 no-repeat;
+		}
+		
+					/*footer*/ 
+		footer{
+			width: 868px;height: 171px;padding: 21px 36px 44px;background: #000;
+		}
+		.footer_top{
+			width: 100%;height: 55px;overflow: hidden;
+		}
+		.footer_top>a{
+			float: left;margin-top: 3px;
+		}
+		.footer_top>ul{
+			float: right;padding: 20px 0 0 0;
+		}
+		.footer_top>ul>li{
+			float: left;padding-left: 4px;
+		}
+		
+		.footer_middle{
+			width: 100%;height: 53px;overflow: hidden;position: relative;
+		}
+		.footer_middle>ul{
+			float: left;padding: 15px 0 18px;margin-left: 2px;
+		}
+		.footer_middle>ul>li{
+			float: left;padding-right: 29px;margin-right: 29px;font-size: 14px;
+			background: url(images/top_line.png) right  no-repeat;
+		}
+		.footer_middle>ul>li>a{
+			color: #fff;
+		}
+		#footer_active{
+			color: #575652;
+		}
+		.footer_middle>ul>li>a:hover{
+			color: #575652;
+		}
+		.footer_middle>img{
+			float: right;margin-top: 2px;position: absolute;right: 0;top: 0;
+		}
+		.footer_bottom{
+			padding-top: 18px;border-top: 1px solid #0d0d0d;text-align: center;
+		}
+		.footer_bottom>a{
+			font-size: 14px;color: #fff;
+		}
+		.footer_bottom>a:hover{
+			text-decoration: underline;
+		}
+		.ftl{
+			height: 20px;width: 76px;line-height: 20px;text-align: center;display: none;
+			background: #FFBA1A;color: #fff;font-size: 14px;position:absolute;
+		}
+		
+	</style>
+</head>
+<body>
+	<div id="main">
+		<!-- header -->
+		<header>
+			<div class="htop">
+				<div id="logo">
+					<a href="index.html">
+						<img src="images/logo.png" alt="">
+					</a>
+				</div>
+				<ul class="nav">
+					<li>
+						<a href="#">
+							<img src="images/top_icon1.gif" alt="">
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<img src="images/top_icon2.gif" alt="">
+						</a>
+					</li>
+					<li class="end">
+						<a href="#">
+							<img src="images/top_icon3.gif" alt="">
+						</a>
+					</li>
+				</ul>
+				<ul class="menu">
+					<li>
+						<a href="index.html" id="menu_active">HOME</a>
+					</li>
+					<li>
+						<a href="Mission.html">OUR MISSION</a>
+					</li>
+					<li>
+						<a href="News.html">NEWS & PRESS</a>
+					</li>
+					<li>
+						<a href="Help.html">HOW TO HELP</a>
+					</li>
+					<li>
+						<a href="Contact.html">CONTACT</a>
+					</li>
+				</ul>
+			</div>
+			<div class="hbottom">
+				<ul class="swiper_left">
+					<li>
+						<div>
+							<img id="sl" src="images/banner1_active1.png" alt="">
+						</div>
+					</li>
+					<li>
+						<div>
+							<img src="images/banner2_active1.png" alt="">
+						</div>
+					</li>
+					<li>
+						<div>
+							<img src="images/banner3_active1.png" alt="">
+						</div>
+					</li>
+				</ul>
+				<div class="swiper">
+					<div class="pics"></div>
+					<div class="pics"></div>
+					<div class="pics"></div>
+					<div class="pics"></div>
+					<div class="pics"></div>
+					<div class="pics"></div>
+					<div class="pics"></div>
+					<div class="pics"></div>
+					<div class="pics"></div>
+					<div class="pics"></div>
+					<div class="pics"></div>
+					<div class="pics"></div>
+					<div class="pics"></div>
+					<div class="pics"></div>
+					<div class="pics"></div>
+				</div>
+				<div class="swiper_right">
+					<div id="sr">
+						<img class="img1" src="images/2017-04-25_214050.png" alt="">
+						<img class="img2" src="images/2017-04-25_214204.png" alt="">
+					</div>
+					<div>
+						<img class="img1" src="images/2017-04-25_214304.png" alt="">
+						<img class="img2" src="images/2017-04-25_214331.png" alt="">
+					</div>
+					<div>
+						<img class="img1" src="images/2017-04-25_214426.png" alt="">
+						<img class="img2" src="images/2017-04-25_214505.png" alt="">
+					</div>
+				</div>
+			</div>
+		</header>
+		<div></div>
+		<!-- /header -->
+		<!-- content -->
+		<div id="content">
+			<div class="story">
+				<div class="storyline1">
+					<div class="storyline2">
+						<div class="story1">
+							<img src="images/story1.png" alt="">
+							Hope Center is one of 
+							<a href="#" id="story1">free website tem- plates</a>
+							 , opti- mized for 1024X768 res.
+							<a href="#" id="readm1">Read More</a>
+						</div>
+						<div class="story2">
+							<img src="images/story2.png" alt="">
+							This Hope Center Template goes with two packages – with PSD source files and without them.
+							<a href="#" id="readm2">Read More</a>
+						</div>
+						<div class="story3">
+							<img src="images/story3.png" alt="">
+							This website template has several pages:<a href="#">Home</a>,<a href="#">Our Mission</a>,<a href="#">News and Press</a>,<a href="#">How to Help</a>,<a href="#">Contact Us</a>.
+							<a href="#" id="readm3">Read More</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="mission">
+				<img src="images/ourmission.png" alt="">
+				<p>
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incid- idunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exerci- tation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse.
+					<img src="images/quot2.png" alt="">
+				</p>
+			</div>
+			<div class="date">
+				<div class="dateline1">
+					<div class="dateline2">
+						<div class="date1">
+							<div class="date_pic1"></div>
+							<p>Natus error sit voluptatem accusantium doloremque laudantium.</p>
+							<a href="#">READ MORE</a>
+						</div>
+						<div class="date2">
+							<div class="date_pic2"></div>
+							<p>Architecto beatae vitae dicta sunt explicabo emo enim ipsam.</p>
+							<a href="#">READ MORE</a>
+						</div>
+						<div class="date3">
+							<div class="date_pic3"></div>
+							<p>Magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
+							<a href="#">READ MORE</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- /content -->
+		<!-- footer -->
+		<footer>
+			<div class="footer_top">
+				<a href="index.html">
+					<img src="images/footer_logo.png" alt="">
+				</a>
+				<ul>
+					<li id="facebook"><a href="#"><img src="images/icon1.gif" alt=""></a></li>
+					<li id="twitter"><a href="#"><img src="images/icon2.gif" alt=""></a></li>
+					<li id="linkedin"><a href="#"><img src="images/icon3.gif" alt=""></a></li>
+				</ul>
+			</div>
+			<div class="footer_middle">
+				<ul>
+					<li>
+						<a href="index.html" id="footer_active">Home</a>
+					</li>
+					<li>
+						<a href="Mission.html">Our Mission</a>
+					</li>
+					<li>
+						<a href="News.html">News & Press</a>
+					</li>
+					<li>
+						<a href="Help.html">How to Help</a>
+					</li>
+					<li>
+						<a href="Contact.html">Contact</a>
+					</li>
+				</ul>
+				<img src="images/footer_tel.png" alt="">
+			</div>
+			<div class="footer_bottom">
+				<a href="#">H5-26 Silence Zhang</a>
+				<br>
+				<a href="#">张宴其</a>
+			</div>
+		</footer>
+		<div class="ftl facebook"><span>Facebook</span></div>
+		<div class="ftl twitter"><span>Twitter</span></div>
+		<div class="ftl linkedin"><span>Linkedin</span></div>
+		<!-- /footer -->
+	</div>
+</body>
+</html>
+<script>
+	// 轮播图
+	$('.swiper_left>li').eq(0).mouseover(function(){
+		$('.swiper_left img').eq(0).stop().animate({left:'0px'},300);
+	}).mouseout(function(){
+		if(k!=1){
+			$('.swiper_left img').eq(0).stop().animate({left:'-250px'},300);
+		}
+		
+	})
+	$('.swiper_left>li').eq(1).mouseover(function(){
+		$('.swiper_left img').eq(1).stop().animate({left:'0px'},300);
+	}).mouseout(function(){
+		if(k!=2){
+			$('.swiper_left img').eq(1).stop().animate({left:'-250px'},300);
+		}
+	})
+	$('.swiper_left>li').eq(2).mouseover(function(){
+		$('.swiper_left img').eq(2).stop().animate({left:'0px'},300);
+	}).mouseout(function(){
+		if(k!=3){
+			$('.swiper_left img').eq(2).stop().animate({left:'-250px'},300);
+		}
+
+	})
+		// 块定位
+	for(var i = 0;i<15;i++){
+		var newLeft = 48*i;
+		$('.pics').eq(i).css({left:newLeft + 'px'});
+		newLeft *= -1;
+		$('.pics').eq(i).css({backgroundPosition:newLeft + 'px 0px'});
+	}
+		//依次翻页动画
+	function run(){
+		var j = 0;
+		var timer = setInterval(function(){
+			$('.pics').eq(j).animate({width:'48px'},500);
+			j++;
+			if(j>14){
+				clearInterval(timer);
+			}
+		},50);
+	}
+		//轮播间隔6s
+	var k = 1;
+	var swiper;
+	function walk(){
+	    swiper =setInterval(function(){
+			//替换前置
+		$('.swiper').eq(0).css({backgroundImage:"url('images/img"+k+".jpg')"});
+		$('.swiper_right>div').eq(k-1).stop().animate({right:'-590px'},500);
+		$('.swiper_left img').eq(k-1).stop().animate({left:'-250px'},300);
+		k++;
+		if(k>3){
+			k = 1;
+		}	
+			//展示当前
+		for(var i = 0;i < 15;i++){
+			var left = -48*i;
+			$('.pics').eq(i).css({
+				backgroundPosition:left + 'px 0px',
+				backgroundImage:"url('images/img"+k+".jpg')",
+				width:'0px'});
+		}
+		$('.swiper_right>div').eq(k-1).stop().delay(1000).animate({right:'0px'},500);
+		$('.swiper_left img').eq(k-1).stop().animate({left:'0px'},300);
+		run();
+	},6000);
+	}
+	walk();
+	//轮播点击
+	$('.swiper_left div').eq(0).click(function(){
+		clearInterval(swiper);
+		$('.swiper').eq(0).css({backgroundImage:"url('images/img"+k+".jpg')"});
+		$('.swiper_right>div').eq(k-1).stop().animate({right:'-590px'},500);
+		$('.swiper_left img').eq(k-1).stop().animate({left:'-250px'},300);
+
+		for(var i = 0;i < 15;i++){
+			var left = -48*i;
+			$('.pics').eq(i).css({
+				backgroundPosition:left + 'px 0px',
+				backgroundImage:"url('images/img1.jpg')",
+				width:'0px'});
+		}
+		$('.swiper_right>div').eq(0).stop().delay(1000).animate({right:'0px'},500);
+		$('.swiper_left img').eq(0).stop().animate({left:'0px'},300);
+		k = 1;
+		run();
+		walk();
+	})
+	$('.swiper_left div').eq(1).click(function(){
+		clearInterval(swiper);
+		$('.swiper').eq(0).css({backgroundImage:"url('images/img"+k+".jpg')"});
+		$('.swiper_right>div').eq(k-1).stop().animate({right:'-590px'},500);
+		$('.swiper_left img').eq(k-1).stop().animate({left:'-250px'},300);
+
+		for(var i = 0;i < 15;i++){
+			var left = -48*i;
+			$('.pics').eq(i).css({
+				backgroundPosition:left + 'px 0px',
+				backgroundImage:"url('images/img2.jpg')",
+				width:'0px'});
+		}
+		$('.swiper_right>div').eq(1).stop().delay(1000).animate({right:'0px'},500);
+		$('.swiper_left img').eq(1).stop().animate({left:'0px'},300);
+		k = 2;
+		run();
+		walk();
+	})
+	$('.swiper_left div').eq(2).click(function(){
+		clearInterval(swiper);
+		$('.swiper').eq(0).css({backgroundImage:"url('images/img"+k+".jpg')"});
+		$('.swiper_right>div').eq(k-1).stop().animate({right:'-590px'},500);
+		$('.swiper_left img').eq(k-1).stop().animate({left:'-250px'},300);
+
+		for(var i = 0;i < 15;i++){
+			var left = -48*i;
+			$('.pics').eq(i).css({
+				backgroundPosition:left + 'px 0px',
+				backgroundImage:"url('images/img3.jpg')",
+				width:'0px'});
+		}
+		$('.swiper_right>div').eq(2).stop().delay(1000).animate({right:'0px'},500);
+		$('.swiper_left img').eq(2).stop().animate({left:'0px'},300);
+		k = 3;
+		run();
+		walk();
+	})
+	//底部特效
+	$('#facebook').mousemove(function(ent){
+		var e = ent || window.event;
+		$('.facebook').css({left:e.pageX-475,top:e.pageY-30,display:'block'})
+	}).mouseout(function(ent){
+		var e = ent || window.event;
+		$('.facebook').css({display:'none'})
+	});
+	$('#twitter').mousemove(function(ent){
+		var e = ent || window.event;
+		$('.twitter').css({left:e.pageX-475,top:e.pageY-30,display:'block'})
+	}).mouseout(function(ent){
+		var e = ent || window.event;
+		$('.twitter').css({display:'none'})
+	});
+	$('#linkedin').mousemove(function(ent){
+		var e = ent || window.event;
+		$('.linkedin').css({left:e.pageX-475,top:e.pageY-30,display:'block'})
+	}).mouseout(function(ent){
+		var e = ent || window.event;
+		$('.linkedin').css({display:'none'})
+	});
+</script>
